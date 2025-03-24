@@ -23,7 +23,11 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('signup/', views.signup, name='signup'),
     path('registro/', views.registro, name='registro'),
-    path('registros/crear/', views.crear_registros, name='crear_registros'),
+    path('registro_terminada/', views.registro_terminada, name='registro_terminada'),
+    path('registros/crear/', views.crear_registro, name='crear_registro'), 
+    path('registros/<int:registro_id>/', views.registro_detail, name='registro_detail'),  
+    path('registros/<int:registro_id>/salida/', views.registro_salida, name='registro_salida'), 
+    path('registros/<int:registro_id>/eliminar/', views.eliminar_salida, name='eliminar_salida'), 
     path('logout/', views.signout, name='logout'),
     path('signin/', views.signin, name='signin'),
 ]

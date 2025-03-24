@@ -1,8 +1,7 @@
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
 
-# Create your models here.class Registros(models.Model):
-class registros(models.Model):
+class Registro(models.Model): 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     espacio = models.CharField(max_length=50)
     marca = models.CharField(max_length=50)
@@ -14,4 +13,3 @@ class registros(models.Model):
     
     def __str__(self):
         return f"{self.user.username} - {self.espacio} - {self.marca} {self.modelo} - {self.placa} - {self.estado} - Entrada: {self.fecha_entrada} - Salida: {self.fecha_salida}"
-

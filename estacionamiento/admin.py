@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import registros
+from .models import Registro  
 
-class registrosAdmin(admin.ModelAdmin):
+class RegistroAdmin(admin.ModelAdmin):  
     readonly_fields = ("fecha_entrada",)
 
-# Register your models here.
-admin.site.register(registros, registrosAdmin)
+# Registrar el modelo con el admin
+admin.site.register(Registro, RegistroAdmin)
